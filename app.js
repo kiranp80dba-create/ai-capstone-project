@@ -8,8 +8,7 @@ const routes = [
   { key: 'scaling', label: '6. Scaling Strategy' },
   { key: 'governance', label: '7. Governance & Compliance' },
   { key: 'kpis', label: '8. KPIs' },
-  { key: 'conclusion', label: 'Conclusion' },
-  { key: 'pages', label: 'Visual Appendix' }
+  { key: 'conclusion', label: 'Conclusion' }
 ];
 
 const titleEl = document.getElementById('view-title');
