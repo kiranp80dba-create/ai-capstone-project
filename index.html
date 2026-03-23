@@ -27,7 +27,7 @@
         <a href="#governance" data-route="governance">7. Governance & Compliance</a>
         <a href="#kpis" data-route="kpis">8. KPIs</a>
         <a href="#conclusion" data-route="conclusion">Conclusion</a>
-        <a href="#pages" data-route="pages">Original Document Pages</a>
+        <a href="#pages" data-route="pages">Visual Appendix</a>
       </nav>
 
       <div class="sidebar-footer">
@@ -43,6 +43,7 @@
           <h2 id="view-title">Overview</h2>
         </div>
         <div class="topbar-actions">
+          <a class="nav-btn download-btn" href="AI_Integration_Capstone_Project.pdf" download="AI_Integration_Capstone_Project.pdf">Download PDF</a>
           <button id="prevBtn" class="nav-btn" type="button">← Previous</button>
           <button id="nextBtn" class="nav-btn" type="button">Next →</button>
         </div>
@@ -55,8 +56,11 @@
             <h3>AI Integration Strategy for Automated SQL Performance Tuning</h3>
             <p>
               This static website converts the full capstone document into an easy-to-navigate project with clickable sections,
-              previous/next navigation, embedded visuals, and an original-page archive.
+              previous/next navigation, embedded visuals, and a visual appendix.
             </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="AI_Integration_Capstone_Project.pdf" download="AI_Integration_Capstone_Project.pdf">Download Full PDF</a>
+            </div>
             <div class="meta-grid">
               <div><strong>Jurisdiction</strong><span>Worldwide operations</span></div>
               <div><strong>Sector</strong><span>Financial services</span></div>
@@ -88,7 +92,7 @@
               <li>Use the left sidebar to jump to any section</li>
               <li>Use Previous and Next to move sequentially</li>
               <li>Use browser back/forward because each section uses URL hashes</li>
-              <li>Open the final section to browse all original rendered document pages</li>
+              <li>Open the final section to browse the full visual appendix</li>
             </ul>
           </article>
         </div>
@@ -105,7 +109,7 @@
             <a href="#governance">7. Governance and Compliance</a>
             <a href="#kpis">8. Key Performance Indicators</a>
             <a href="#conclusion">Conclusion</a>
-            <a href="#pages">Original Document Pages</a>
+            <a href="#pages">Visual Appendix</a>
           </div>
         </article>
       </section>
@@ -606,13 +610,23 @@
 
       <section class="view" data-view="pages">
         <article class="section-header card">
-          <h3>Original Document Pages</h3>
+          <h3>Visual Appendix</h3>
           <p>
             This archive preserves the original rendered pages so the full document content and visuals remain available inside the static site.
           </p>
         </article>
         <div class="page-gallery" id="pageGallery"></div>
       </section>
+
+      <div class="image-modal" id="imageModal" aria-hidden="true">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close image viewer">×</button>
+        <button class="modal-nav modal-prev" id="modalPrev" type="button" aria-label="Previous image">‹</button>
+        <div class="modal-stage">
+          <div class="modal-image" id="modalImage"></div>
+          <div class="modal-caption" id="modalCaption"></div>
+        </div>
+        <button class="modal-nav modal-next" id="modalNext" type="button" aria-label="Next image">›</button>
+      </div>
     </main>
   </div>
 

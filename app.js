@@ -9,12 +9,14 @@ const routes = [
   { key: 'governance', label: '7. Governance & Compliance' },
   { key: 'kpis', label: '8. KPIs' },
   { key: 'conclusion', label: 'Conclusion' },
-  { key: 'pages', label: 'Original Document Pages' }
+  { key: 'pages', label: 'Visual Appendix' }
 ];
 
 const titleEl = document.getElementById('view-title');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const galleryImages = [];
+let currentModalIndex = 0;
 
 function currentRouteKey() {
   const hash = window.location.hash.replace('#', '');
@@ -47,25 +49,100 @@ function renderRoute() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function openModal(index) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  const item = galleryImages[index];
+  if (!item) return;
+  currentModalIndex = index;
+  modalImage.style.backgroundImage = `url('${item.src}')`;
+  modalCaption.textContent = item.caption;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+function stepModal(direction) {
+  const nextIndex = (currentModalIndex + direction + galleryImages.length) % galleryImages.length;
+  openModal(nextIndex);
+}
+
 function buildPageGallery() {
   const gallery = document.getElementById('pageGallery');
   if (!gallery) return;
   for (let i = 1; i <= 20; i++) {
     const n = String(i).padStart(2, '0');
-    const a = document.createElement('a');
-    a.href = `assets/pages/page-${n}.png`;
-    a.className = 'page-link';
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.innerHTML = `
-      <img src="assets/thumbs/page-${n}.png" alt="Thumbnail for page ${i}" />
-      <span>Open original page ${i}</span>
+    const src = `assets/pages/page-${n}.png`;
+    const caption = `Page ${i}`;
+    galleryImages.push({ src, caption });
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'page-card';
+    button.setAttribute('aria-label', `Open page ${i} preview`);
+    button.innerHTML = `
+      <span class="page-thumb" style="background-image: url('assets/thumbs/page-${n}.png')"></span>
+      <span class="page-card-label">Page ${i}</span>
     `;
-    gallery.appendChild(a);
+    button.addEventListener('click', () => openModal(i - 1));
+    gallery.appendChild(button);
   }
 }
 
+function hardenMediaInteractions() {
+  document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.setAttribute('loading', 'lazy');
+  });
+
+  document.addEventListener('contextmenu', (event) => {
+    if (event.target.closest('img, .page-thumb, .modal-image, .hero-image-wrap, .figure-card')) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener('dragstart', (event) => {
+    if (event.target.closest('img, .page-thumb, .modal-image')) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    const key = event.key.toLowerCase();
+    const blockedCombo = (event.ctrlKey || event.metaKey) && ['s', 'u', 'p'].includes(key);
+    const blockedDevtools = key === 'f12' || ((event.ctrlKey || event.metaKey) && event.shiftKey && ['i', 'j', 'c'].includes(key));
+    if (blockedCombo || blockedDevtools) {
+      event.preventDefault();
+    }
+
+    const modalOpen = document.getElementById('imageModal').classList.contains('open');
+    if (!modalOpen) return;
+    if (key === 'escape') closeModal();
+    if (key === 'arrowleft') stepModal(-1);
+    if (key === 'arrowright') stepModal(1);
+  });
+}
+
+function bindModalEvents() {
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  document.getElementById('modalPrev').addEventListener('click', () => stepModal(-1));
+  document.getElementById('modalNext').addEventListener('click', () => stepModal(1));
+  document.getElementById('imageModal').addEventListener('click', (event) => {
+    if (event.target.id === 'imageModal') closeModal();
+  });
+}
+
 buildPageGallery();
+bindModalEvents();
+hardenMediaInteractions();
 window.addEventListener('hashchange', renderRoute);
 window.addEventListener('DOMContentLoaded', renderRoute);
 renderRoute();
