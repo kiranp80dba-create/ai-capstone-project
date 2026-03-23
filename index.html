@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Integration Capstone Project</title>
+  <meta name="description" content="Static capstone website for AI Integration Strategy for Automated SQL Performance Tuning at a Global Financial Institution." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="eyebrow">Capstone Project</div>
+        <h1>AI Integration Strategy</h1>
+        <p>Automated SQL Performance Tuning at a Global Financial Institution</p>
+      </div>
+
+      <nav class="nav" aria-label="Section navigation">
+        <a href="#overview" data-route="overview">Overview</a>
+        <a href="#context" data-route="context">1. Context</a>
+        <a href="#technology" data-route="technology">2. Technology Choice</a>
+        <a href="#cost" data-route="cost">3. Cost Considerations</a>
+        <a href="#security" data-route="security">4. Security Plan</a>
+        <a href="#change" data-route="change">5. Change Management</a>
+        <a href="#scaling" data-route="scaling">6. Scaling Strategy</a>
+        <a href="#governance" data-route="governance">7. Governance & Compliance</a>
+        <a href="#kpis" data-route="kpis">8. KPIs</a>
+        <a href="#conclusion" data-route="conclusion">Conclusion</a>
+        <a href="#pages" data-route="pages">Original Document Pages</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div>Ready for Vercel or GitHub Pages</div>
+        <div class="muted">Pure static HTML/CSS/JS</div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Global Bank — IT/Database SRE</div>
+          <h2 id="view-title">Overview</h2>
+        </div>
+        <div class="topbar-actions">
+          <button id="prevBtn" class="nav-btn" type="button">← Previous</button>
+          <button id="nextBtn" class="nav-btn" type="button">Next →</button>
+        </div>
+      </header>
+
+      <section class="view active" data-view="overview">
+        <div class="hero-card">
+          <div class="hero-copy">
+            <span class="badge">Internal Use Only</span>
+            <h3>AI Integration Strategy for Automated SQL Performance Tuning</h3>
+            <p>
+              This static website converts the full capstone document into an easy-to-navigate project with clickable sections,
+              previous/next navigation, embedded visuals, and an original-page archive.
+            </p>
+            <div class="meta-grid">
+              <div><strong>Jurisdiction</strong><span>Worldwide operations</span></div>
+              <div><strong>Sector</strong><span>Financial services</span></div>
+              <div><strong>Department</strong><span>IT / Database SRE</span></div>
+              <div><strong>Date</strong><span>March 2026</span></div>
+            </div>
+          </div>
+          <div class="hero-image-wrap">
+            <img src="assets/pages/page-01.png" alt="Capstone cover page" class="hero-image" />
+          </div>
+        </div>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>What this project covers</h4>
+            <ul>
+              <li>Context and future-state operating model</li>
+              <li>Technology and architecture choices</li>
+              <li>Cost, ROI, and optimization levers</li>
+              <li>Security, governance, and regulatory alignment</li>
+              <li>Change management and training</li>
+              <li>Crawl–walk–run scaling model</li>
+              <li>KPIs, review cadence, and success measures</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>How to use this site</h4>
+            <ul>
+              <li>Use the left sidebar to jump to any section</li>
+              <li>Use Previous and Next to move sequentially</li>
+              <li>Use browser back/forward because each section uses URL hashes</li>
+              <li>Open the final section to browse all original rendered document pages</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Table of Contents</h4>
+          <div class="toc-grid">
+            <a href="#context">1. Context</a>
+            <a href="#technology">2. Technology Choice</a>
+            <a href="#cost">3. Cost Considerations</a>
+            <a href="#security">4. Security Plan</a>
+            <a href="#change">5. Change Management and Training</a>
+            <a href="#scaling">6. Scaling Strategy</a>
+            <a href="#governance">7. Governance and Compliance</a>
+            <a href="#kpis">8. Key Performance Indicators</a>
+            <a href="#conclusion">Conclusion</a>
+            <a href="#pages">Original Document Pages</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="view" data-view="context">
+        <article class="section-header card">
+          <h3>1. Context</h3>
+          <p>
+            The initiative is positioned within a globally chartered financial institution operating across the United States,
+            European Union, United Kingdom, and Asia-Pacific. The target function is Oracle database performance tuning inside
+            IT/Database Site Reliability Engineering, moving from reactive DBA-led optimization to proactive, AI-enabled tuning.
+          </p>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Sector & Business Type</h4>
+            <p>Retail and wholesale banking, investment services, and enterprise payments in a multi-jurisdiction regulatory environment.</p>
+          </article>
+          <article class="card">
+            <h4>Department, Process & Function</h4>
+            <p>Oracle database performance tuning within IT/Database SRE, with AI recommending optimizations and Oracle validating them before DBA approval.</p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Current vs. Future State</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Dimension</th><th>Current State</th><th>AI-Enabled Future State</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Detection</td><td>Reactive, ticket-driven</td><td>Proactive, continuous monitoring</td></tr>
+                <tr><td>Analysis</td><td>Manual DBA investigation</td><td>LLM-generated tuning recommendations</td></tr>
+                <tr><td>Validation</td><td>Manual EXPLAIN PLAN review</td><td>Oracle-automated cost comparison</td></tr>
+                <tr><td>MTTT</td><td>Hours to days</td><td>Minutes</td></tr>
+                <tr><td>Audit Trail</td><td>Inconsistent documentation</td><td>Full PDF report and immutable logs</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-03.png" alt="Context page with sector, business type, and future state transition" />
+            <figcaption>Page 3: context narrative and transition from reactive to proactive SQL tuning.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-04.png" alt="Operational domain analysis and current vs future state table" />
+            <figcaption>Page 4: operational domain analysis and current vs. future state comparison.</figcaption>
+          </figure>
+        </div>
+
+        <article class="card">
+          <h4>Problem Statement</h4>
+          <p>
+            The document frames the core issue as an unsustainable manual tuning model, with engineers spending more than 27 hours per week on troubleshooting,
+            while legacy optimization approaches deliver limited efficiency at enterprise data scale.
+          </p>
+        </article>
+      </section>
+
+      <section class="view" data-view="technology">
+        <article class="section-header card">
+          <h3>2. Technology Choice</h3>
+          <p>
+            The solution uses a frontier LLM for reasoning and recommendation generation, while preserving deterministic control by keeping Oracle as the validation engine.
+            The design emphasizes zero-data-retention controls, explainability, secure orchestration, prompt caching, semantic routing, and strict separation between AI reasoning and execution.
+          </p>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Primary AI Selection Criteria</h4>
+            <ul>
+              <li>Zero Data Retention (ZDR)</li>
+              <li>Reasoning quality and explainability</li>
+              <li>Safety architecture</li>
+              <li>Enterprise controls and governance features</li>
+              <li>Ease of integration with on-prem MCP</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Architecture Principles</h4>
+            <ul>
+              <li>Probabilistic reasoning is separated from deterministic execution</li>
+              <li>Semantic routing assigns simpler vs. more complex workloads</li>
+              <li>Every AI suggestion is mathematically validated before use</li>
+              <li>Prompt caching and structured payloads reduce cost and variance</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Supporting Technology Stack</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Component</th><th>Technology</th><th>Purpose</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>LLM API</td><td>Frontier models</td><td>Tuning recommendations and reasoning</td></tr>
+                <tr><td>Orchestration</td><td>Python (FastAPI / Celery), MCP</td><td>Pipeline control, sanitization, parsing, reuse</td></tr>
+                <tr><td>Database</td><td>Oracle DB (AWR / V$ views)</td><td>SQL extraction and plan comparison</td></tr>
+                <tr><td>Secrets Vault</td><td>HashiCorp Vault / AWS Secrets Manager</td><td>Key management and rotation</td></tr>
+                <tr><td>SIEM / Logging</td><td>Splunk / Elastic SIEM</td><td>Centralized logging and anomaly alerts</td></tr>
+                <tr><td>DLP / Redaction</td><td>Python regex + Microsoft Presidio</td><td>PII scrubbing before API calls</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-06.png" alt="Technology choice page with architecture diagram" />
+            <figcaption>Page 6: technology choice and secure AI-driven SQL tuning architecture.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-07.png" alt="Supporting technology stack and system architecture visual" />
+            <figcaption>Page 7: supporting technology stack and system architecture flow.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="view" data-view="cost">
+        <article class="section-header card">
+          <h3>3. Cost Considerations</h3>
+          <p>
+            Year-one total cost of ownership is estimated at <strong>$203,500 to $418,000</strong>, spanning capital expenditure,
+            API operating costs, cloud infrastructure, staffing and training, vendor governance, and contingency.
+          </p>
+        </article>
+
+        <article class="card">
+          <h4>Year 1 TCO Breakdown</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Cost Category</th><th>Description</th><th>Estimated Range</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Capital Expenditure</td><td>SIEM/PAM tooling, vault infrastructure, secure API gateway, DLP integration</td><td>$80,000–$150,000 one-time</td></tr>
+                <tr><td>AI API (OpEx)</td><td>Frontier-model API usage, estimated around 10k calls/day</td><td>$15,000–$50,000 / year</td></tr>
+                <tr><td>Cloud & Infrastructure</td><td>VMs, encrypted storage, logging and monitoring</td><td>$30,000–$60,000 / year</td></tr>
+                <tr><td>Staffing & Training</td><td>MRM analyst, DBA upskilling, SecOps AI threat training, DPO advisory</td><td>$40,000–$80,000 / year</td></tr>
+                <tr><td>Vendor Governance</td><td>Third-party risk assessments, ZDR legal review, audit rights</td><td>$20,000–$40,000 / year</td></tr>
+                <tr><td>Contingency</td><td>Scope changes, regulatory updates, pilot overruns</td><td>$18,500–$38,000</td></tr>
+                <tr><td><strong>Total Estimated TCO</strong></td><td></td><td><strong>$203,500–$418,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Cost Optimization Levers</h4>
+            <ul>
+              <li>Model switching for low-complexity vs. complex workloads</li>
+              <li>Response caching for repeat SQL patterns</li>
+              <li>Strict token discipline and hard daily budget ceilings</li>
+              <li>Deferred hardware CapEx from better SQL efficiency</li>
+            </ul>
+          </article>
+          <article class="card accent">
+            <h4>ROI Summary</h4>
+            <p>
+              A 40% DBA workload reduction on SQL tuning tasks across a 10-person team is projected to yield about
+              <strong>$500,000–$700,000 in annual productivity savings</strong>, supporting positive ROI within 6–12 months of Phase 2.
+            </p>
+          </article>
+        </div>
+
+        <figure class="figure-card full-width">
+          <img src="assets/pages/page-08.png" alt="Cost considerations chart and TCO breakdown" />
+          <figcaption>Page 8: TCO, optimization levers, and cost breakdown visual.</figcaption>
+        </figure>
+      </section>
+
+      <section class="view" data-view="security">
+        <article class="section-header card">
+          <h3>4. Security Plan</h3>
+          <p>
+            Security is organized around the NIST Cybersecurity Framework (CSF) 2.0 and strengthened by the NIST AI RMF and ISO/IEC 42001 and 27001.
+            The design assumes generative AI risk is real and controls it through sanitization, least privilege, monitoring, rollback, and an emergency kill switch.
+          </p>
+        </article>
+
+        <div class="card-grid three">
+          <article class="card">
+            <h4>Govern & Identify</h4>
+            <ul>
+              <li>ZDR contracts before any provider API use</li>
+              <li>AI acceptable use policy and annual attestation</li>
+              <li>Full data flow mapping for GDPR and DORA</li>
+              <li>OWASP Top 10 for LLMs threat model coverage</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Protect</h4>
+            <ul>
+              <li>Mandatory SQL sanitization with bind variable replacement</li>
+              <li>Least-privilege Oracle automation account</li>
+              <li>Vault-managed secrets with 90-day rotation</li>
+              <li>TLS 1.3 and certificate pinning</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Detect, Respond & Recover</h4>
+            <ul>
+              <li>Malicious syntax scanning for DDL/DML risk</li>
+              <li>API billing anomaly monitoring</li>
+              <li>Emergency kill switch to sever LLM connectivity</li>
+              <li>Automated rollback to known-good baselines</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-10.png" alt="Security architecture aligned to NIST CSF 2.0" />
+            <figcaption>Page 10: layered security architecture aligned to NIST CSF 2.0.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-11.png" alt="Security plan and cyber resilience framework" />
+            <figcaption>Page 11: specific govern, protect, detect, respond, and recover controls.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="view" data-view="change">
+        <article class="section-header card">
+          <h3>5. Change Management and Training</h3>
+          <p>
+            The adoption plan uses the Prosci ADKAR framework to drive awareness, desire, knowledge, ability, and reinforcement,
+            framing AI as a co-pilot that reduces repetitive work rather than displacing skilled engineers.
+          </p>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Stakeholder Communication Plan</h4>
+            <ul>
+              <li>Executive and board briefings on risk, KPIs, regulation, and vendor oversight</li>
+              <li>Bi-weekly sprint reviews for DBA and engineering teams during pilot</li>
+              <li>Internal audit and compliance walkthroughs before pilot launch</li>
+              <li>Legal and privacy involvement from inception</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Role-Based Training Programme</h4>
+            <ul>
+              <li>DBAs / Model Owners: AI trust and verification</li>
+              <li>Developers / Automation Engineers: secure coding and CI/CD checks</li>
+              <li>SecOps / SOC: OWASP Top 10 for LLMs and kill switch drills</li>
+              <li>Legal / Compliance and Senior Management: regulation and governance literacy</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Training Cadence</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Role</th><th>Training Focus</th><th>Delivery & Cadence</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>DBAs / Model Owners</td><td>AI trust, hallucination review, override procedures</td><td>4-hour workshop + annual refresh</td></tr>
+                <tr><td>Developers / Automation Eng.</td><td>Parameterized queries, bind variables, no PII in literals</td><td>2-hour online module + quarterly update</td></tr>
+                <tr><td>SecOps / SOC Analysts</td><td>Prompt injection, model DoS, supply chain, kill switch</td><td>Half-day classroom + semi-annual exercise</td></tr>
+                <tr><td>Legal & Compliance</td><td>SR 11-7, GDPR, EU AI Act, DORA, ZDR obligations</td><td>2-hour annual briefing</td></tr>
+                <tr><td>Senior Management / Board</td><td>AI risk landscape and governance responsibilities</td><td>Annual executive briefing</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-12.png" alt="Change management stakeholder communication and training plan" />
+            <figcaption>Page 12: stakeholder communication model and adoption metrics.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-13.png" alt="Role-based training curriculum and change management strategy" />
+            <figcaption>Page 13: role-based training curriculum and targeted learning paths.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="view" data-view="scaling">
+        <article class="section-header card">
+          <h3>6. Scaling Strategy — Crawl, Walk, Run</h3>
+          <p>
+            The implementation follows a phased maturity model that increases autonomy only as controls, trust, and evidence mature.
+            Each phase defines its scope, oversight model, controls, and measurable gates before progressing.
+          </p>
+        </article>
+
+        <div class="card-grid three">
+          <article class="card">
+            <h4>Crawl (Months 0–3)</h4>
+            <ul>
+              <li>Non-production only</li>
+              <li>Advisory mode with PDF recommendations</li>
+              <li>100% DBA review</li>
+              <li>Gate: ≥70% precision and zero sanitization failures</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Walk (Months 3–6)</h4>
+            <ul>
+              <li>Selected production databases</li>
+              <li>Low-risk pre-approved patterns</li>
+              <li>Dual approval for higher tiers</li>
+              <li>Gate: ≥95% regression avoidance and no P1 incidents</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Run (Months 6–12+)</h4>
+            <ul>
+              <li>Enterprise-wide scoped deployment</li>
+              <li>Limited auto-implementation for approved patterns</li>
+              <li>Rollback automation and quarterly DR drills</li>
+              <li>Gate: ≥40% DBA productivity gain and exam readiness</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card accent">
+          <h4>Governance Principle</h4>
+          <p>AI recommends — Oracle validates — DBAs approve — systems audit.</p>
+        </article>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-14.png" alt="Crawl walk run maturity model roadmap" />
+            <figcaption>Page 14: phased maturity model and roadmap.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-15.png" alt="Detailed scaling phase gates and controls" />
+            <figcaption>Page 15: detailed controls, success gates, and oversight by phase.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="view" data-view="governance">
+        <article class="section-header card">
+          <h3>7. Governance and Compliance</h3>
+          <p>
+            Governance is structured across five pillars: cross-functional oversight, AI use-case inventory, model risk management,
+            regulatory compliance, and third-party vendor governance. The design is built for multi-jurisdiction banking environments.
+          </p>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Cross-Functional AI Oversight Committee</h4>
+            <ul>
+              <li>CISO: API security, TLS, vendor review, kill switch authority</li>
+              <li>DPO / Legal: GDPR, CCPA, GLBA, ZDR, DPIA, cross-border transfers</li>
+              <li>Head of DBA / DBRE: validation logic, restricted accounts, rollback, DR testing</li>
+              <li>Model Risk Management: validation, inventory, drift monitoring, change control</li>
+              <li>Internal Audit: controls assurance and examination readiness</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h4>Classification</h4>
+            <p>
+              AutoTune AI is classified as <strong>Minimal/Limited Risk</strong> under the EU AI Act and as
+              <strong>Medium Operational Risk / Elevated Data-Handling Risk / Low Customer-Harm Risk</strong> under SR 11-7.
+            </p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h4>Applicable Regulatory Compliance Matrix</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Regulation / Standard</th><th>Jurisdiction</th><th>Project Action</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>GLBA / FTC Safeguards Rule</td><td>U.S.</td><td>Data minimization, DLP, encryption, no PII in prompts</td></tr>
+                <tr><td>SR 11-7 Model Risk Management</td><td>U.S. Banking</td><td>Model inventory, validation, human oversight, drift monitoring</td></tr>
+                <tr><td>Interagency TPRM</td><td>U.S. Banking</td><td>Vendor due diligence, ZDR contracts, exit strategy</td></tr>
+                <tr><td>NYDFS Part 500</td><td>New York</td><td>Cyber governance, AI vendor controls, annual certification</td></tr>
+                <tr><td>GDPR / UK GDPR</td><td>EU / UK</td><td>DPIA, SCCs, data minimization, retention schedules</td></tr>
+                <tr><td>EU AI Act</td><td>EU</td><td>AI inventory, risk classification, human oversight</td></tr>
+                <tr><td>DORA</td><td>EU Financial</td><td>ICT resilience, third-party oversight, incident reporting</td></tr>
+                <tr><td>PCI DSS</td><td>Global</td><td>Segment PCI systems; no payment data in prompts or logs</td></tr>
+                <tr><td>CCPA / CPRA</td><td>California</td><td>Minimize personal info; define retention and access controls</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <figure class="figure-card full-width">
+          <img src="assets/pages/page-16.png" alt="Governance and compliance architecture" />
+          <figcaption>Page 16: governance architecture across global jurisdictions.</figcaption>
+        </figure>
+
+        <figure class="figure-card full-width">
+          <img src="assets/pages/page-17.png" alt="Governance page with oversight committee and compliance matrix" />
+          <figcaption>Page 17: oversight committee roles, regulatory matrix, and risk classification.</figcaption>
+        </figure>
+      </section>
+
+      <section class="view" data-view="kpis">
+        <article class="section-header card">
+          <h3>8. Key Performance Indicators (KPIs)</h3>
+          <p>
+            The KPI framework spans performance improvement, AI quality and safety, operational efficiency, and governance/compliance.
+            It is designed to show both business value and control effectiveness.
+          </p>
+        </article>
+
+        <article class="card">
+          <h4>KPI Table</h4>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>KPI</th><th>Category</th><th>Formula / Measure</th><th>Target</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>SQL Elapsed Time Reduction</td><td>Performance Improvement</td><td>(Original − New) / Original × 100</td><td>20–40%</td></tr>
+                <tr><td>Optimizer Cost Reduction</td><td>Performance Improvement</td><td>Cost delta vs. original plan</td><td>15–30%</td></tr>
+                <tr><td>Recommendation Acceptance Rate</td><td>AI Quality</td><td>Approved / Total AI Recs × 100</td><td>30–60%</td></tr>
+                <tr><td>Regression Avoidance Rate</td><td>AI Safety</td><td>Successful / Total Changes × 100</td><td>≥95%</td></tr>
+                <tr><td>Mean Time to Tune (MTTT)</td><td>Operational Efficiency</td><td>SQL detection to validation time</td><td>Minutes, not hours</td></tr>
+                <tr><td>DBA Productivity Gain</td><td>Operational Efficiency</td><td>Baseline hours − Post-AI hours</td><td>40–70% reduction</td></tr>
+                <tr><td>Recommendation Precision</td><td>AI Accuracy</td><td>Valid Recs / Total Outputs × 100</td><td>≥70%</td></tr>
+                <tr><td>Audit Trail Completeness</td><td>Governance & Compliance</td><td>Fully documented events / Total × 100</td><td>100%</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="card-grid two">
+          <article class="card">
+            <h4>Monitoring & Review Cadence</h4>
+            <ul>
+              <li>Real-time: billing monitors, malicious syntax alerts, anomaly detection</li>
+              <li>Daily: runtime and cost reduction review</li>
+              <li>Weekly: acceptance and regression review</li>
+              <li>Monthly: full scorecard to AI Governance Committee</li>
+              <li>Quarterly: independent model performance review and vendor reassessment</li>
+              <li>Annually: full re-validation and compliance self-assessment</li>
+            </ul>
+          </article>
+          <article class="card accent">
+            <h4>What Success Looks Like</h4>
+            <ul>
+              <li>Quarter-over-quarter SQL elapsed time improvement</li>
+              <li>Regression avoidance sustained above 95%</li>
+              <li>40–70% reduction in routine DBA tuning workload</li>
+              <li>100% audit trail completeness</li>
+              <li>Flattening or declining infrastructure cost trend</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="image-stack two-img">
+          <figure class="figure-card">
+            <img src="assets/pages/page-18.png" alt="KPI framework introduction" />
+            <figcaption>Page 18: KPI framework overview and metric categories.</figcaption>
+          </figure>
+          <figure class="figure-card">
+            <img src="assets/pages/page-19.png" alt="KPI table with cadence and success measures" />
+            <figcaption>Page 19: KPI formulas, targets, cadence, and success outcomes.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="view" data-view="conclusion">
+        <article class="section-header card">
+          <h3>Conclusion</h3>
+          <p>
+            The capstone concludes that AI-driven SQL tuning is strategically sound, measurably beneficial, and regulatory-defensible when implemented with strong controls,
+            human oversight, deterministic validation, and examination-ready governance.
+          </p>
+        </article>
+
+        <article class="card accent">
+          <blockquote>
+            “AI recommends, Oracle validates, humans approve, and systems audit.”
+          </blockquote>
+          <p>
+            Every action is intended to be traceable, reversible, and aligned to concrete obligations spanning GLBA, SR 11-7, GDPR, DORA, and the EU AI Act.
+          </p>
+        </article>
+
+        <figure class="figure-card full-width">
+          <img src="assets/pages/page-20.png" alt="Conclusion page" />
+          <figcaption>Page 20: final conclusion from the capstone document.</figcaption>
+        </figure>
+      </section>
+
+      <section class="view" data-view="pages">
+        <article class="section-header card">
+          <h3>Original Document Pages</h3>
+          <p>
+            This archive preserves the original rendered pages so the full document content and visuals remain available inside the static site.
+          </p>
+        </article>
+        <div class="page-gallery" id="pageGallery"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
